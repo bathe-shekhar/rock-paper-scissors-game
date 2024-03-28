@@ -5,15 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors Game</title>
-
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./index.js"></script>
 </head>
 
 <body>
-    <h1 style="margin-top: 300px; text-align: center;">Rock-Paper-Scissors Game</h1>
-    <div id="result" style="margin-top: 20px; text-align: center; font-size: 32px">
+    <h1>Rock-Paper-Scissors Game</h1>
+    <div class="choice-block">
+        <h2>Please select your choice:</h2>
+        <div class="player-choice-block">
+            <button id="rock" class="player-choice-button"><img src="./public/images/rock-4803349_1280.webp"
+                    alt="rock"></button>
+            <button id="paper" class="player-choice-button"><img src="./public/images/paper-1763262_1280.png"
+                    alt="paper"></button>
+            <button id="scissor" class="player-choice-button"><img src="./public/images/scissors-1297454_640.png"
+                    alt="scissor"></button>
+        </div>
+    </div>
+    <div id="result">
         Result:
     </div>
-    <script src="./index.js"></script>
+    <div class="winning-count">
+        <h2>Computer Score: <span id="computer-count"></span></h2>
+        <h2>Your Score: <span id="player-count"></span></h2>
+    </div>
+
 </body>
 
 </html>
