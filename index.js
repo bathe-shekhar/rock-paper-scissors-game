@@ -73,9 +73,30 @@ function playRound(playerSelection, computerSelection) {
             }
         }
     }
-    result.textContent = "Result: " + msg;
-    computer.textContent = computerCount;
-    player.textContent = playerCount;
+
+    if (computerCount == 5) {
+        result.textContent = "Final Result: Computer Won With 5 Points!!! Play Again...";
+        computerCount = 0;
+        playerCount = 0;
+        computer.textContent = computerCount;
+        player.textContent = playerCount;
+    }
+    else {
+        if (playerCount == 5) {
+            result.textContent = "Final Result: You Won With 5 Points!!! Play Again...";
+            computerCount = 0;
+            playerCount = 0;
+            computer.textContent = computerCount;
+            player.textContent = playerCount;
+        }
+        else {
+            result.textContent = "Result: " + msg;
+            computer.textContent = computerCount;
+            player.textContent = playerCount;
+        }
+    }
+
+
 }
 
 // const playerSelection = prompt("Enter your choice: rock, paper, scissor");
